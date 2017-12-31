@@ -1,0 +1,23 @@
+{
+  "name": "ide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^0.3.7",
+    "monaco-editor": "^0.10.1",
+    "sweetalert2": "^7.3.0"
+  },
+  "scripts": {
+    "clean": "mkdir -p docs/scripts/ && rm -rf docs/ && mkdir -p docs/scripts/ && mkdir -p docs/styles/",
+    "build-views": "cp src/views/index.html docs/",
+    "build-styles":
+      "cat node_modules/sweetalert2/dist/sweetalert2.min.css src/styles/main.css > docs/styles/styles.css",
+    "build-monaco": "cp -R node_modules/monaco-editor/min/vs/ docs/scripts/",
+    "build-lessons": "node utils/generateLessons.js src/scripts/",
+    "build-scripts":
+      "cat node_modules/sweetalert2/dist/sweetalert2.min.js src/scripts/lessons.js src/scripts/state.js src/scripts/compiler.js > docs/scripts/app.js",
+    "build":
+      "npm run clean && npm run build-views && npm run build-styles && npm run build-monaco && npm run build-lessons && npm run build-scripts"
+  }
+}

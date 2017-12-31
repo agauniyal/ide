@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://golden-layout.com/files/latest/js/goldenlayout.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://golden-layout.com/files/latest/css/goldenlayout-base.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <title>Learnyoucpp!</title>
+</head>
+
+<body>
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/vs/loader.js"></script>
+  <script>
+    require.config({ paths: { 'vs': 'scripts/vs' } });
+    require(['vs/editor/editor.main'], function () {
+      const myLayout = new GoldenLayout(state.layout.config);
+
+      myLayout.registerComponent('editor', function (container, componentState) {
+        const settings = state.editor.settings;
+        settings.value = componentState.value;
+        state.editor.instances.push({
+          name: componentState.name,
+          instance: monaco.editor.create(container.getElement()[0], settings)
+        });
+      });
+
+      myLayout.registerComponent('description', function (container, componentState) {
+        state.editor.description = document.createElement('div');
+        state.editor.description.id = 'description-box';
+        container.getElement()[0].appendChild(state.editor.description);
+      });
+
+      myLayout.registerComponent('output', function (container, componentState) {
+        container.getElement().html('<pre id="output-box"><code></code></pre>');
+      });
+
+      myLayout.registerComponent('input', function (container, componentState) {
+        container.getElement().html('<textarea id="input-box"></textarea>');
+      });
+
+      myLayout.registerComponent('settings', function (container, componentState) {
+        container.getElement().html('<select id="select-lessons"></select>');
+      });
+
+      myLayout.on('stateChanged', function () {
+        for (e of state.editor.instances) {
+          e.instance.layout();
+        }
+      });
+
+      myLayout.init();
+      state.editor.root = myLayout.root;
+      state.progress.reset();
+      const selectEl = document.getElementById('select-lessons');
+      state.progress.mountSelect(selectEl);
+      selectEl.onchange = function () {
+        state.progress.set({
+          unit: parseInt(selectEl.value / 100),
+          lesson: parseInt(selectEl.value % 100)
+        });
+      };
+    });
+  </script>
+</body>
+
+</html>
