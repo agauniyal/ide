@@ -15,7 +15,7 @@ where
 * `{}` marks the body of the function
 * a return statement that returns a value from the function
 
-As an example we've already created a function named `add()` that takes two integer types and returns an integer as result. To call a function we write -
+As an example we've already created a function named `sum()` that takes two integer types and returns an integer as result. To call a function we write -
 
 ```cpp
 returnType result = name(/* Pass parameters here */);
@@ -29,7 +29,7 @@ Did you notice that we skipped a `return` statement in `int main(){}` even thoug
 
 We've already created a `sum()` function that takes two integers and returns the addition of both which is then stored in `resultSum` variable. This variable is then printed on the screen along with a message. To pass this lesson, you need to -
 
-* Declare a function named `diff()` below `add()`, that takes two integers and returns the difference of them
+* Declare a function named `diff()` below `sum()`, that takes two integers and returns the difference of them
 * Call the `diff()` function by passing `8` and `2` to it
 * Store the result of call in `resultDiff` variable
 

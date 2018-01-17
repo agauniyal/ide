@@ -2,6 +2,8 @@
 
 int sum(int a, int b) { return a + b; }
 
+// Add diff function here
+
 int main()
 {
     int resultSum = sum(3, 5);
