@@ -17,8 +17,8 @@ const getCompilerOptions = () => {
   return JSON.stringify({
     code: getMainCode(),
     codes: getExtraCode(),
-    options: 'warning,optimize,boost-nothing-gcc-head,c++2a,cpp-pedantic',
-    compiler: 'gcc-head',
+    options: 'warning,boost-nothing-clang-head,c++2a,cpp-pedantic',
+    compiler: 'clang-head',
     save: true,
     stdin: document.getElementById('input-box').value
   });
@@ -45,7 +45,8 @@ const checkResult = (c, r) => {
       }
     }
   } else {
-    const errorMsg = c.length === 0 ? 'Answer is incorrect!' : 'Compilation failed!';
+    const errorMsg =
+      c.length === 0 ? 'Answer is incorrect!' : 'Compilation failed. Check output window for more details!';
     swal('Oops...', errorMsg, 'error');
   }
 };
@@ -72,15 +73,15 @@ const compile = () => {
       return response.json();
     })
     .then(function(j) {
-      const output = document.getElementById('output-box').children[0];
+      const ansiUp = new AnsiUp();
       compileButton.innerText = '🔥';
-      output.innerText = '';
-      output.innerText += j.compiler_message ? j.compiler_message + '\n\n' : '';
-      output.innerText += j.program_message ? j.program_message + '\n\n' : '';
-      output.innerText += '\n\tProgram Exited with status: ' + j.status;
-      output.innerText += '\n\tPermalink: ' + j.url + '\n ';
 
-      output.scrollTop = output.scrollHeight;
+      let outputHtml = '';
+      outputHtml += j.compiler_message ? ansiUp.ansi_to_html(j.compiler_message) + '\n' : '';
+      outputHtml += j.program_message ? ansiUp.ansi_to_html(j.program_message) + '\n' : '';
+      outputHtml += '\tProgram Exited with status: ' + j.status;
+      outputHtml += '\n\tPermalink: <a target="_blank" href="' + j.url + '">' + j.url + '</a>\n ';
+      document.getElementById('output-box').children[0].innerHTML = outputHtml;
 
       checkResult(j.compiler_message, j.program_message);
     })
