@@ -15,7 +15,6 @@
       box-sizing: inherit;
     }
   </style>
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://golden-layout.com/files/latest/js/goldenlayout.min.js"></script>
@@ -56,7 +55,7 @@
       });
 
       myLayout.registerComponent('settings', function (container, componentState) {
-        container.getElement().html('<select id="select-lessons"></select>');
+        container.getElement().html('<div id="setting-box"><select id="select-lessons"></select></div>');
       });
 
       myLayout.on('stateChanged', function () {
@@ -73,7 +72,7 @@
       selectEl.onchange = function () {
         state.progress.set({
           unit: parseInt(selectEl.value / 100),
-          lesson: parseInt(selectEl.value % 100)
+          chapter: parseInt(selectEl.value % 100)
         });
       };
     });

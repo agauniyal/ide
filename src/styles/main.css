@@ -25,12 +25,16 @@
   color: white;
   height: 100%;
   width: 100%;
-  overflow: auto;
-  font-size: 18px;
+  overflow: hidden;
+  font-size: 17px;
   background: black;
-  font-family: 'Inconsolata', monospace;
+  font-family: monospace;
   line-height: 20px;
   text-rendering: optimizeLegibility;
+}
+
+#description-box:hover {
+  overflow: overlay;
 }
 
 #description-box h2 {
@@ -49,13 +53,14 @@
   background-color: darkslategray;
   color: antiquewhite;
   font-size: 15px;
-  font-family: 'Inconsolata', monospace;
+  font-family: monospace;
   padding: 4px;
 }
 
 #output-box {
   height: 100%;
   width: 100%;
+  margin: 10px 0 0 0;
 }
 
 #output-box code {
@@ -66,11 +71,12 @@
   color: antiquewhite;
   display: block;
   overflow: auto;
-  font-family: 'Inconsolata', monospace;
+  font-family: monospace;
 }
 
 #input-box {
-  padding :10px;
+  margin: 10px 0 0 0;
+  padding: 10px;
   height: 100%;
   width: 100%;
   display: block;
@@ -78,7 +84,14 @@
   border: 0;
   outline: 0;
   font-size: 14px;
-  font-family: 'Inconsolata', monospace;
+  font-family: monospace;
+}
+
+#setting-box {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  display: block;
 }
 
 .monaco-editor {

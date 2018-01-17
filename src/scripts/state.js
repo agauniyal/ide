@@ -10,11 +10,11 @@ const state = {
       minimap: { enabled: false },
       renderControlCharacters: true,
       useTabStops: true,
-      fontSize: 17,
+      fontSize: 15,
       autoIndent: true,
       lineNumbersMinChars: 3,
-      fontFamily: 'Inconsolata',
       renderIndentGuides: false,
+      fontFamily: 'monospace',
       scrollbar: { vertical: 'hidden' }
     },
     resizeAll() {
@@ -50,6 +50,7 @@ const state = {
         });
       }
       state.editor.description.innerHTML = chapter.readme;
+      document.getElementById('output-box').children[0].innerText = '';
     },
     get() {
       return {

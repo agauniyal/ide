@@ -1,0 +1,2 @@
+Sum of number 3 and 5 is: 8
+Difference of number 8 and 2 is: 6

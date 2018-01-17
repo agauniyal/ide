@@ -1,26 +1,16 @@
-**Welcome to Learnyoucpp!** Along this journey you'll learn to write c++ programming language and understand its applications and inner workings. You may ask, what is C++ and why should I learn it? Let's see what [wikipedia](https://en.wikipedia.org/wiki/C%2B%2B) has to say on this -
+**Welcome to Learnyoucpp!** Along this journey you'll learn to write c++ programming language and understand its applications and best practices. We assume you're already familiar with some programming in general and want to learn or get upto date with recent changes in C++. A lot has changed since the advent of _Modern C++_ but the essentials of language are still preserved. Let's see what creator of C++ has to say on it -
 
-> C++ is a general-purpose programming language. It has imperative, object-oriented and generic programming features, while also providing facilities for low-level memory manipulation.
+> C++11 feels like a new language. I write code differently now than I did in C++98. The C++11 code is shorter, simpler, and usually more efficient than what I used to write.
 
-> It was designed with a bias toward system programming and embedded, resource-constrained and large systems, with performance, efficiency and flexibility of use as its design highlights. C++ has also been found useful in many other contexts, with key strengths being software infrastructure and resource-constrained applications, including desktop applications, servers and performance-critical applications.
+> _- Bjarne Stroustrup_
 
-Now that we've got some idea of what we're dealing with, let's jump straight into the course. This course has been divided into several units (which get progressively harder) which again are divided into several chapters like the one you're currently reading. Each chapter will introduce some new concept which might require some exercises marked with TODO: you must complete to move forward. Other features will be introduced as we move ahead.
+This course is divided into several units which are again divided into several chapters. Each chapter tries to focus on a specific feature of this language and provides challenges that you can complete in order to get familiar with those features and understand more about this language. The aim for this unit is to get you familiar with the language without diving deep into the details. We'll start with the most minimal program in C++ -
 
-## Comments
-
-This chapter introduces comments in c++, which are of two types - Single line comments and multiline comments. Single line comments start with 2 slashes which look like `// This is a comment` and are valid till the end of line. Multiline comments, as the name says extend to multiple lines and start with `/*` and end with `*/`. Here's an example that depicts use of both -
-
-```
-// This is a single line comment
-
-/* And this one is
-multiline comment*/
-```
+## Main
+The program on the right defines a function called _main_ which takes no arguments and does nothing. Every C++ program must contain exactly one global _main_ function which gets executed right when you run your executable. The braces `{` & `}` mark the beginning and end of _main_ function and keyword `int` specifies the return type of your function. We'll read more about functions in later units.
 
 ### TODO
 
-* Convert the multiline comment inside the editor to single line comments
+* Execute the program by pressing compile button on bottom right of your screen!
 
-To pass this chapter, you must be able to submit the program on right side with required changes by pressing submit button on the bottom. Watch out for errors in the bottom panel.
-
-Hint: you can resize everything on this website :)
+**PS**: you can resize everything on this website so try playing out with layout and adjust accordingly :)
