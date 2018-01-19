@@ -1,6 +1,15 @@
 # IDE
 Learnyoucpp online ide - https://agauniyal.github.io/ide/
 
+## TODO
+- [ ] Add more units/chapters
+- [ ] Add hints for difficult lessons(involves idea for their UI as well)
+- [ ] Add setting for editor font size
+- [ ] Add language keywords to monaco editor(provide better completion support)
+- [ ] Add compile/execute shortcut to monaco editor itself
+- [ ] Fix maximized window transparent tabbar
+- [ ] Improve compiler warnings/errors in output window
+
 ### How to develop
 - clone the repo locally - `git clone https://github.com/agauniyal/ide.git`
 - change directories - `cd ide`

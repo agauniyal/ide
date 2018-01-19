@@ -15,5 +15,5 @@ monaco-editor@^0.10.1:
   resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.10.1.tgz#8c96c4f15b6b5258bf92cbde93cad8a7e3007e14"
 
 sweetalert2@^7.3.0:
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-7.4.0.tgz#d474acb4c0e8fc6308d955eed8fc6a2228be2f19"
+  version "7.4.1"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-7.4.1.tgz#85a8a9f8092d39ba5e0902535daccb11c7b665ad"
