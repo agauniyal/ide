@@ -25,16 +25,12 @@
   color: white;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   font-size: 17px;
   background: black;
   font-family: monospace;
   line-height: 20px;
   text-rendering: optimizeLegibility;
-}
-
-#description-box:hover {
-  overflow: overlay;
 }
 
 #description-box h2 {
