@@ -505,8 +505,8 @@ const getCompilerOptions = () => {
   return JSON.stringify({
     code: getMainCode(),
     codes: getExtraCode(),
-    options: 'warning,boost-nothing-clang-head,c++2a,cpp-pedantic',
-    compiler: 'clang-head',
+    options: 'warning,boost-nothing-clang-8.0.0,c++2a,cpp-pedantic ',
+    compiler: 'clang-8.0.0',
     save: true,
     stdin: document.getElementById('input-box').value
   });
