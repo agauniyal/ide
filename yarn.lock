@@ -3,17 +3,21 @@
 
 
 ansi_up@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/ansi_up/-/ansi_up-2.0.2.tgz#9b54de508c5c579f5b6968e65c1b863e0680ab92"
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/ansi_up/-/ansi_up-2.0.3.tgz#2b5d31df72121dab78ea34f5b2daf626e01578a2"
+  integrity sha1-K10x33ISHat46jT1str2JuAVeKI=
 
 marked@^0.3.7:
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.12.tgz#7cf25ff2252632f3fe2406bde258e94eee927519"
+  version "0.3.19"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.19.tgz#5d47f709c4c9fc3c216b6d46127280f40b39d790"
+  integrity sha512-ea2eGWOqNxPcXv8dyERdSr/6FmzvWwzjMxpfGB/sbMccXoct+xY+YukPD+QTUZwyvK7BZwcr4m21WBOW41pAkg==
 
 monaco-editor@^0.10.1:
   version "0.10.1"
   resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.10.1.tgz#8c96c4f15b6b5258bf92cbde93cad8a7e3007e14"
+  integrity sha1-jJbE8VtrUli/ksvek8rYp+MAfhQ=
 
 sweetalert2@^7.3.0:
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-7.4.1.tgz#85a8a9f8092d39ba5e0902535daccb11c7b665ad"
+  version "7.33.1"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-7.33.1.tgz#7e3534d2c2962f875f419cfea5d75ee526d65cd4"
+  integrity sha512-69KYtyhtxejFG0HDb8aVhAwbpAWPSTZwaL5vxDHgojErD2KeFxTmRgmkbiLtMC8UdTFXRmvTPtZTF4459MUb7w==
